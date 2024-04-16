@@ -39,13 +39,14 @@ def main():
     if missing != 'n':
         n = get_input("Enter the whole number: ", "Invalid format. Please enter a whole number.")
 
-    print("Calculating...")
     if missing == 'q':
         result = no_q(n, e)
+        print(f"Calculating \033[1m{n} * {e}\033[0m ...")
     elif missing == 'n':
         result = no_n(q, e)
+        print(f"Calculating \033[1m{q} / {e}\033[0m ...")
 
-    print(f"Calculated value of {missing}: {result:.3e} ({result})")
+    print(f"Calculated value of \033[1m{missing}\033[0m: \033[1m{result:.3e} ({result})\033[0m")
 
 
 if __name__ == "__main__":
